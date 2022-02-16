@@ -4,13 +4,13 @@ using Service.TutorialFinancial.Grpc;
 
 namespace Service.TutorialFinancial.Client
 {
-    [UsedImplicitly]
-    public class TutorialFinancialClientFactory : MyGrpcClientFactory
-    {
-        public TutorialFinancialClientFactory(string grpcServiceUrl) : base(grpcServiceUrl)
-        {
-        }
+	[UsedImplicitly]
+	public class TutorialFinancialClientFactory : MyGrpcClientFactory
+	{
+		public TutorialFinancialClientFactory(string grpcServiceUrl) : base(grpcServiceUrl)
+		{
+		}
 
-        public ITutorialFinancialService GetTutorialFinancialService() => CreateGrpcService<ITutorialFinancialService>();
-    }
+		public ITutorialFinancialService GetTutorialFinancialService() => CreateGrpcService<ITutorialFinancialService>();
+	}
 }

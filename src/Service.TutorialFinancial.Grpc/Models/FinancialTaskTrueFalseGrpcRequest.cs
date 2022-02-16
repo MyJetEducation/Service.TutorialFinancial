@@ -12,10 +12,10 @@ namespace Service.TutorialFinancial.Grpc.Models
 		[DataMember(Order = 2)]
 		public FinancialTaskTrueFalseAnswerGrpcModel[] Answers { get; set; }
 
-		[DataMember(Order = 4)]
+		[DataMember(Order = 3)]
 		public bool IsRetry { get; set; }
 
-		[DataMember(Order = 5)]
+		[DataMember(Order = 4)]
 		public TimeSpan Duration { get; set; }
 	}
 }

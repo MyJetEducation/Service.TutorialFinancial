@@ -3,15 +3,16 @@ using Service.Education;
 using Service.Education.Structure;
 using Service.TutorialFinancial.Grpc.Models;
 using Service.TutorialFinancial.Grpc.Models.State;
+using Service.TutorialFinancial.Helper;
 using static Service.Education.Helpers.AnswerHelper;
 
 namespace Service.TutorialFinancial.Services
 {
 	public partial class TutorialFinancialService
 	{
-		public static readonly EducationStructureUnit Unit2 = EducationStructure.Tutorials[EducationTutorial.FinancialServices].Units[2];
+		private static readonly EducationStructureUnit Unit2 = TutorialHelper.EducationStructureTutorial.Units[2];
 
-		public async ValueTask<TestScoreGrpcResponse> Unit2TextAsync(FinancialTaskTextGrpcRequest request) => 
+		public async ValueTask<TestScoreGrpcResponse> Unit2TextAsync(FinancialTaskTextGrpcRequest request) =>
 			await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[1], request.IsRetry, request.Duration);
 
 		public async ValueTask<TestScoreGrpcResponse> Unit2TestAsync(FinancialTaskTestGrpcRequest request)
@@ -27,10 +28,10 @@ namespace Service.TutorialFinancial.Services
 			return await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[2], request.IsRetry, request.Duration, progress);
 		}
 
-		public async ValueTask<TestScoreGrpcResponse> Unit2VideoAsync(FinancialTaskVideoGrpcRequest request) => 
+		public async ValueTask<TestScoreGrpcResponse> Unit2VideoAsync(FinancialTaskVideoGrpcRequest request) =>
 			await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[3], request.IsRetry, request.Duration);
 
-		public async ValueTask<TestScoreGrpcResponse> Unit2CaseAsync(FinancialTaskCaseGrpcRequest request) => 
+		public async ValueTask<TestScoreGrpcResponse> Unit2CaseAsync(FinancialTaskCaseGrpcRequest request) =>
 			await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[4], request.IsRetry, request.Duration, CountProgress(request.Value == 2));
 
 		public async ValueTask<TestScoreGrpcResponse> Unit2TrueFalseAsync(FinancialTaskTrueFalseGrpcRequest request)
@@ -46,7 +47,7 @@ namespace Service.TutorialFinancial.Services
 			return await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[5], request.IsRetry, request.Duration, progress);
 		}
 
-		public async ValueTask<TestScoreGrpcResponse> Unit2GameAsync(FinancialTaskGameGrpcRequest request) => 
+		public async ValueTask<TestScoreGrpcResponse> Unit2GameAsync(FinancialTaskGameGrpcRequest request) =>
 			await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[6], request.IsRetry, request.Duration);
 	}
 }

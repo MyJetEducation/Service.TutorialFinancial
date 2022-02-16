@@ -25,8 +25,5 @@ namespace Service.TutorialFinancial.Settings
 
 		[YamlProperty("TutorialFinancial.UserProgressServiceUrl")]
 		public string UserProgressServiceUrl { get; set; }
-
-		[YamlProperty("TutorialFinancial.TestMode")]
-		public bool TestMode { get; set; }
 	}
 }

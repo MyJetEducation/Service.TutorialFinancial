@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Service.Education.Structure;
-using Service.EducationProgress.Grpc.Models;
 using Service.TutorialFinancial.Grpc.Models.State;
+using Service.TutorialFinancial.Models;
 
 namespace Service.TutorialFinancial.Services
 {
@@ -10,8 +10,8 @@ namespace Service.TutorialFinancial.Services
 	{
 		ValueTask<TestScoreGrpcResponse> SetTaskProgressAsync(Guid? userId, EducationStructureUnit unit, EducationStructureTask task, bool isRetry, TimeSpan duration, int? progress = null);
 
-		ValueTask<(FinancialStateUnitGrpcModel stateUnitModel, int TrueFalseProgress, int CaseProgress)> GetUnitProgressAsync(Guid? userId, int unit);
+		ValueTask<UnitStateGrpcModel> GetUnitProgressAsync(Guid? userId, int unit);
 
-		ValueTask<TaskEducationProgressGrpcModel> GetTaskProgressAsync(Guid? userId, int unit, int task);
+		ValueTask<TaskTypeProgressInfo> GetTotalProgressAsync(Guid? userId, int? unit = null);
 	}
 }

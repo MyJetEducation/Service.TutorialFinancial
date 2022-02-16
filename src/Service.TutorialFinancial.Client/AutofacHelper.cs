@@ -5,13 +5,13 @@ using Service.TutorialFinancial.Grpc;
 
 namespace Service.TutorialFinancial.Client
 {
-    public static class AutofacHelper
-    {
-        public static void RegisterTutorialFinancialClient(this ContainerBuilder builder, string grpcServiceUrl)
-        {
-            var factory = new TutorialFinancialClientFactory(grpcServiceUrl);
+	public static class AutofacHelper
+	{
+		public static void RegisterTutorialFinancialClient(this ContainerBuilder builder, string grpcServiceUrl)
+		{
+			var factory = new TutorialFinancialClientFactory(grpcServiceUrl);
 
-            builder.RegisterInstance(factory.GetTutorialFinancialService()).As<ITutorialFinancialService>().SingleInstance();
-        }
-    }
+			builder.RegisterInstance(factory.GetTutorialFinancialService()).As<ITutorialFinancialService>().SingleInstance();
+		}
+	}
 }

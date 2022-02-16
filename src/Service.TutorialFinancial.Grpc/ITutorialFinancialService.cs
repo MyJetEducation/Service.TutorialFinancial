@@ -9,10 +9,7 @@ namespace Service.TutorialFinancial.Grpc
 	public interface ITutorialFinancialService
 	{
 		[OperationContract]
-		ValueTask<FinancialStateGrpcResponse> GetDashboardStateAsync(FinancialSelectTaskUnitGrpcRequest request);
-
-		[OperationContract]
-		ValueTask<FinishUnitGrpcResponse> GetFinishStateAsync(GetFinishStateGrpcRequest request);
+		ValueTask<FinishStateGrpcResponse> GetFinishStateAsync(GetFinishStateGrpcRequest request);
 
 		#region Unit1
 
