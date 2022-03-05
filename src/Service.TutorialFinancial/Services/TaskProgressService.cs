@@ -141,7 +141,7 @@ namespace Service.TutorialFinancial.Services
 				UserId = userId
 			});
 
-			int unitProgress = (progressResponse?.Value).GetValueOrDefault();
+			int unitProgress = (progressResponse?.TaskScore).GetValueOrDefault();
 			result.TestScore = unitProgress;
 
 			if (unitProgress.IsMinProgress())
