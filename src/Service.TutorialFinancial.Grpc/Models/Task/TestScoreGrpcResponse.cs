@@ -1,6 +1,7 @@
 ﻿using System.Runtime.Serialization;
+using Service.TutorialFinancial.Grpc.Models.State;
 
-namespace Service.TutorialFinancial.Grpc.Models.State
+namespace Service.TutorialFinancial.Grpc.Models.Task
 {
 	[DataContract]
 	public class TestScoreGrpcResponse
@@ -9,6 +10,6 @@ namespace Service.TutorialFinancial.Grpc.Models.State
 		public bool IsSuccess { get; set; }
 
 		[DataMember(Order = 2)]
-		public UnitStateGrpcModel Unit { get; set; }
+		public StateGrpcModel Unit { get; set; }
 	}
 }

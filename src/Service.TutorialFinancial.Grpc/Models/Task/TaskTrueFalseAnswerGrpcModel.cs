@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Serialization;
 using Service.Education;
 
-namespace Service.TutorialFinancial.Grpc.Models
+namespace Service.TutorialFinancial.Grpc.Models.Task
 {
 	[DataContract]
-	public class FinancialTaskTrueFalseAnswerGrpcModel : ITaskTrueFalseAnswer
+	public class TaskTrueFalseAnswerGrpcModel : ITaskTrueFalseAnswer
 	{
 		[DataMember(Order = 1)]
 		public int Number { get; set; }

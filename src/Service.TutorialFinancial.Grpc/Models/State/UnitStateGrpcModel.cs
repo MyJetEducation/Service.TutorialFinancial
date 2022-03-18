@@ -3,7 +3,7 @@
 namespace Service.TutorialFinancial.Grpc.Models.State
 {
 	[DataContract]
-	public class UnitStateGrpcModel
+	public class StateGrpcModel
 	{
 		[DataMember(Order = 1)]
 		public int Unit { get; set; }

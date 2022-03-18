@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Service.TutorialFinancial.Grpc.Models
+namespace Service.TutorialFinancial.Grpc.Models.Task
 {
 	[DataContract]
-	public class FinancialTaskCaseGrpcRequest
+	public class TaskCaseGrpcRequest
 	{
 		[DataMember(Order = 1)]
 		public Guid? UserId { get; set; }

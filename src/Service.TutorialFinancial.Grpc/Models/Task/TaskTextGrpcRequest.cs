@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Service.TutorialFinancial.Grpc.Models
+namespace Service.TutorialFinancial.Grpc.Models.Task
 {
 	[DataContract]
-	public class FinancialTaskGameGrpcRequest
+	public class TaskTextGrpcRequest
 	{
 		[DataMember(Order = 1)]
 		public Guid? UserId { get; set; }
@@ -14,8 +14,5 @@ namespace Service.TutorialFinancial.Grpc.Models
 
 		[DataMember(Order = 3)]
 		public TimeSpan Duration { get; set; }
-
-		[DataMember(Order = 4)]
-		public bool Passed { get; set; }
 	}
 }

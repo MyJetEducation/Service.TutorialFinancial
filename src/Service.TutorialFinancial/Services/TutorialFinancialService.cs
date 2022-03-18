@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Service.TutorialFinancial.Grpc;
-using Service.TutorialFinancial.Grpc.Models;
 using Service.TutorialFinancial.Grpc.Models.State;
 using Service.TutorialFinancial.Mappers;
 using Service.TutorialFinancial.Models;
