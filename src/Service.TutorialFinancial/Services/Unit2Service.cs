@@ -10,7 +10,7 @@ namespace Service.TutorialFinancial.Services
 {
 	public partial class TutorialFinancialService
 	{
-		private static readonly EducationStructureUnit Unit2 = TutorialHelper.EducationStructureTutorial.Units[2];
+		private static readonly EducationStructureUnit Unit2 = TutorialHelper.StructureTutorial.Units[2];
 
 		public async ValueTask<TestScoreGrpcResponse> Unit2TextAsync(FinancialTaskTextGrpcRequest request) =>
 			await _taskProgressService.SetTaskProgressAsync(request.UserId, Unit2, Unit2.Tasks[1], request.IsRetry, request.Duration);
