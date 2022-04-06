@@ -1,6 +1,5 @@
 ﻿using System.ServiceModel;
 using System.Threading.Tasks;
-using Service.TutorialFinancial.Grpc.Models;
 using Service.TutorialFinancial.Grpc.Models.State;
 using Service.TutorialFinancial.Grpc.Models.Task;
 
