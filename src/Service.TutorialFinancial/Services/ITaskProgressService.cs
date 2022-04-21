@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Service.Education.Contracts.State;
+using Service.Education.Contracts.Task;
 using Service.Education.Structure;
-using Service.TutorialFinancial.Grpc.Models.State;
-using Service.TutorialFinancial.Grpc.Models.Task;
 using Service.TutorialFinancial.Models;
 
 namespace Service.TutorialFinancial.Services
